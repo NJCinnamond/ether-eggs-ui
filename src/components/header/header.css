@@ -1,12 +1,12 @@
 .contents-left > a {
     text-decoration: none; /* no underline */
-    color: white;
+    color: black;
   }
 
 .contents-left {
   flex-basis: 50%;
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 500;
   padding-top: .2em;
 }
 
