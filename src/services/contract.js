@@ -1,6 +1,6 @@
 import { useContract } from "@thirdweb-dev/react";
 
-export const easterEggContractAddress = "0x55827916fBC0c93AEb825402C20a8B53AbaC4073";
+export const easterEggContractAddress = "0xEbBbE36D456551fF9Ba4199E2015c835132c18E4";
 
 export const useEtherEggContract = () => {
     return useContract(easterEggContractAddress);
