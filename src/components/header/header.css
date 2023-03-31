@@ -1,6 +1,6 @@
-a {
+.contents-left > a {
     text-decoration: none; /* no underline */
-    color: black;
+    color: white;
   }
 
 .contents-left {
