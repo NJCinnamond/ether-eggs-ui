@@ -1,0 +1,19 @@
+.egg-discovery-container {
+    font-size: 1.1em;
+}
+
+.egg-claim-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.egg-claim-label {
+    margin: 1em;
+}
+
+.egg-claim-hint {
+    margin: 1em;
+    font-size: 0.9em;
+}

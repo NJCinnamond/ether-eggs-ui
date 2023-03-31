@@ -1,0 +1,13 @@
+.hints-container {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(1,1,1,0.1);
+    border-radius: 25px;
+    width: min(95%, 600px);
+    margin: 2em auto;
+    padding: .2em;
+}
+
+.hints-contents {
+    margin: .5em;
+}

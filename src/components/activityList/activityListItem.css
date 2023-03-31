@@ -1,0 +1,32 @@
+.activity-list-item {
+    padding: .5em;
+    margin: 1em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(1,1,1,0.1);
+    border-radius: 25px;
+}
+
+.activity-name {
+    margin-top: .5em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.activity-list-item-contents {
+    display: flex;
+}
+
+.activity-list-item-left {
+    flex-basis: 55%;
+    flex-grow: 70%;
+    padding-right: 5px;
+}
+
+.activity-list-item-right {
+    flex-basis: 45%;
+    flex-shrink: 30%;
+    margin-top: 80px;
+    padding-left: 5px;
+}

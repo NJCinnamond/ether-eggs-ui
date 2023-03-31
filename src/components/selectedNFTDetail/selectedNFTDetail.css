@@ -1,0 +1,12 @@
+.detail-container {
+    border-width: 2px;
+    border-color: rgba(1,1,1,0.1);
+    border-style: solid;
+    border-radius: 25px;
+    width: min(100%, 600px);
+    margin: .5em auto;
+}
+
+.detail-container-contents {
+    margin: 1em;
+}

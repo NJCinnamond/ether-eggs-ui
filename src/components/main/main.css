@@ -1,0 +1,8 @@
+.strava-compatible {
+    max-height: 50px;
+}
+
+.main-box {
+    margin: auto;
+    width: min(95%,1000px)
+}

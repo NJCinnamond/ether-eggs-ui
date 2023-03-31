@@ -1,0 +1,9 @@
+.map-label {
+    margin: 1em;
+    font-size: 1.3em;
+}
+
+.map-contents {
+    align-items: center;
+    text-align: center;
+}

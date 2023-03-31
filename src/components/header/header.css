@@ -1,0 +1,26 @@
+a {
+    text-decoration: none; /* no underline */
+    color: black;
+  }
+
+.contents-left {
+  flex-basis: 50%;
+}
+
+.contents-right {
+  align-items: center;
+  position: relative;
+  vertical-align: center;
+  flex-basis: 50%;
+}
+
+.connect-container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container {
+  display: flex;
+}
