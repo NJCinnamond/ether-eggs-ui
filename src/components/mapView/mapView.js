@@ -18,7 +18,7 @@ export const MapView = () => {
 
             <Hints/>
 
-            <div>
+            <div className="call-to-action">
                 <p>
                     Do you have what it takes to find the remaining eggs?
                 </p>
