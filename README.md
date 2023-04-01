@@ -18,8 +18,7 @@ On the app home page, defined in mapView.js, we render
 - NFTMap component, which uses useNFTs hook to get all the NFT eggs minted from the EtherEggs ERC721 contract. If eggs exist, we show a map that is
 populated with markers based on the metadata coordinates returned in the hook
 - In the Hints component, we use useContractRead to get the hints state variable in the ERC721 contract and show hints to the users
-- If the user has not connected their wallet, we render the ConnectWallet component which prompts the user to connect via Metamask, Coinbase etc. If
-the user has connected their wallet, we render the 'Connect with Strava' button to prompt the user to provide their activity data.
+- If the user has not connected their wallet, we render the ConnectWallet component which prompts the user to connect via Metamask, Coinbase Wallet etc. If the user has connected their wallet, we render the 'Connect with Strava' button to prompt the user to provide their activity data.
 
 The /my-eggs subdomain renders a card view of all eggs found by the connected address, using the useOwnedNFTs hook.
 
@@ -31,7 +30,7 @@ If the user connects their wallet to the dApp, the home screen will show the 'Co
 user to a page where they can give the dApp access to the user's activities via OAuth 2.0. When the user authorizes the app, they are redirected
 to the ethereggs.xyz/callback URL which is handled by react-router-dom.
 
-The callback URL will contain a one-time access token that the app uses to query Strava for the activities with the Strava service. This logic is contained in activityList.js which renders a list of activity items for the user's 10 most recent activities. Each activity item is defined by ActivityListItem component. This component renders a split view: on the left, the activity map renders a map with a marker at the *end* coordinate of the activity, which we interpret as the user's guess to where the egg is. On the right is the EggDiscovery component, which performs the crucial task of hashing the end coordinates (using the Coordinate service) and checking if it is equal to any egg's coordinate hash on the smart contract. If it is, then the user found the egg, and we render the EggClaim component which allows the user to call the contract mint function to claim their egg.
+The callback URL will contain a one-time access token that the app uses to query Strava for the activities using the Strava service. This logic is contained in activityList.js which renders a list of activity items for the user's 10 most recent activities. Each activity item is defined by ActivityListItem component. This component renders a split view: on the left, the activity map renders a map with a marker at the *end* coordinate of the activity, which we interpret as the user's guess to where the egg is. On the right is the EggDiscovery component, which performs the crucial task of hashing the end coordinates (using the Coordinate service) and checking if it is equal to any egg's coordinate hash on the smart contract. If it is, then the user found the egg, and we render the EggClaim component which allows the user to call the contract mint function to claim their egg.
 
 ### Egg Minting Flow
 
@@ -45,7 +44,7 @@ The Mint egg action is defined by a custom useUploadAndMintEtherEgg egg, which w
 
 If at least one egg has been minted from the contract, the home page will render NFTMap which renders a map with markers at locations of all discovered eggs. If the user clicks/taps on a marker, the selectedNFTDetail component below the map will provide more information, such as a link to the IPFS metadata of the egg, the address that found it, and the hint they used. 
 
-The Home page contains a 'Your Eggs' button which links to the /my-eggs subdomain. This renders the MyEggs component which uses the useOwnedNFTs Thirdweb hook to get all egg NFTs minted by the connected address in a card view.
+The Home page contains a 'Your Eggs' button which links to the /my-eggs subdomain. This renders the MyEggs component which uses the useOwnedNFTs Thirdweb hook to get all egg NFTs minted by the connected address. We show these NFTs in a card view where each card shows an egg's map location and metadata.
 
 ## Available Scripts
 
@@ -61,4 +60,4 @@ You may also see any lint errors in the console.
 
 ### How to Deploy
 
-Simply push to the ether-eggs-ui GitHub. An AWS Amplify CI/CD pipeline will take care of deploying to https://ethereggs.xyz
+Simply push to the main branch. An AWS Amplify CI/CD pipeline will take care of deploying to https://ethereggs.xyz
