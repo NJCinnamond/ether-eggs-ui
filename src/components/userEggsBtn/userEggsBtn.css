@@ -1,0 +1,16 @@
+.my-egg-link {
+    background-color: whitesmoke;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 25px;
+    padding: .5em;
+    width: max(100%, 200px);
+    text-decoration: none;
+    color: black;
+    font-size: 0.7em;
+}
+
+.btn-label {
+    margin: 1.5em;
+}

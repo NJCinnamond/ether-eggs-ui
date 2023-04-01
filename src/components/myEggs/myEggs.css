@@ -1,0 +1,40 @@
+.card-group {
+    justify-content: center;
+    display:flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.card-grid, .card {
+    padding: 5px 5px !important;
+    height: auto !important;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.card-body {
+    background-color: #F6F5F5;
+    margin: 0;
+}
+
+.card-map {
+    height: 300px;
+    width: auto;
+    align-content: flex-start;
+}
+
+.card-text {
+    height: fit-content;
+    margin-bottom: 2rem;
+}
+
+.helper-text {
+    margin: 1em;
+    font-size: 1.1em;
+}
+
+.title {
+    margin: .6em;
+    font-size: 1.4em;
+    font-weight: 500;
+}

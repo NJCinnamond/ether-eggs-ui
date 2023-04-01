@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
-import { useNFTs, useContractRead } from "@thirdweb-dev/react";
+import { useNFTs, useContractRead, useConnectionStatus } from "@thirdweb-dev/react";
 import { useEtherEggContract } from '../../services/contract';
 import { Map, Marker } from "pigeon-maps"
-import "./nftMap.css";
 import { SelectedNFTDetail } from '../selectedNFTDetail/selectedNFTDetail';
+import { UserEggsBtn } from '../userEggsBtn/userEggsBtn';
+
+import "./nftMap.css";
 
 export const NFTMap = () => {
     const { contract } = useEtherEggContract();
@@ -35,11 +37,15 @@ export const NFTMap = () => {
     const shouldShowMap = !isLoading && positionData && positionData.length;
     const totalEggs = hints != undefined ? hints.length : 0;
 
+    const connectionStatus = useConnectionStatus();
+    const isConnected = connectionStatus === 'connected';
+
     return (
         <div>
             <div className="map-label">
                 {isLoading && <p>Loading map of found eggs...</p>}
                 {!isLoading && positionData != undefined && <p>A total of {positionData.length} / {totalEggs} eggs have been found</p>}
+                {isConnected && positionData != undefined && positionData.length && <UserEggsBtn/>}
             </div>
             
             <div className="map-contents">

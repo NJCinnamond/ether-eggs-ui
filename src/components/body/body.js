@@ -9,6 +9,7 @@ import { ErrorPage } from '../error/error';
 import './body.css';
 import { MapView } from "../mapView/mapView";
 import { ActivityList } from "../activityList/activityList";
+import { MyEggs } from '../myEggs/myEggs';
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
     {
       path: "/callback",
       element: <ActivityList/>,
+    },
+    {
+      path: "/my-eggs",
+      element: <MyEggs/>,
     },
   ]);
 

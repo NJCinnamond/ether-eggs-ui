@@ -18,7 +18,7 @@ export const ActivityList = () => {
             const activities = await getStravaActivites(accessToken);
 
             // HACK: First strava activity at fenway park
-            activities[0]['end_latlng'] = [42.372641, -71.056414];
+            activities[0]['end_latlng'] = [42.346676, -71.097221];
             
             return activities;
         };

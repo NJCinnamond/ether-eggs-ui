@@ -1,7 +1,10 @@
+const stravaCallback = "https://ethereggs.xyz/callback";
+//const stravaCallback = "http://localhost:3000/callback";
+
 export const getStravaAuthURL = () => {
     return "https://www.strava.com/oauth/authorize/?" +
         "&client_id=49168" +
-        "&redirect_uri=http://localhost:3000/callback" +
+        "&redirect_uri=" + stravaCallback +
         "&response_type=code" +
         "&scope=activity:read_all";
 }
