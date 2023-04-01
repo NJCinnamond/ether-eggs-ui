@@ -1,4 +1,4 @@
-## Ether Eggs
+# Ether Eggs
 
 This repo contains the frontend UI code for the Ether Eggs project, a Harvard Blockchain Conference 2023 Hackathon submission.
 
