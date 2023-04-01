@@ -14,12 +14,13 @@ export const ActivityList = () => {
 
     useEffect(() => {
         const fetchActivities = async () => {
+            console.log("fetching activities");
             const accessToken = await getAccessToken(code);
             const activities = await getStravaActivites(accessToken);
 
-            // HACK: First strava activity at fenway park
-            //activities[0]['end_latlng'] = [42.346676, -71.097221];
-            
+            // HACK: mock strava activity
+            activities[0]['end_latlng'] = [42.374652, -71.118551];
+            console.log("activities", activities);
             return activities;
         };
     
