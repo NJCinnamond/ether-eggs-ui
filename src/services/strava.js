@@ -10,6 +10,7 @@ export const getStravaAuthURL = () => {
 }
 
 export const getAccessToken = async (nonce) => {
+    // Please forgive the client secret inclusion....
     const url = "https://www.strava.com/api/v3/oauth/token?" +
         "client_id=49168" +
         "&client_secret=189fdf1b71a449d8a1e101f571af3e37c7fc63f9" +
