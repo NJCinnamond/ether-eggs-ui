@@ -44,8 +44,8 @@ export const NFTMap = () => {
         <div>
             <div className="map-label">
                 {isLoading && <p>Loading map of found eggs...</p>}
-                {!isLoading && positionData != undefined && <p>A total of {positionData.length} / {totalEggs} eggs have been found</p>}
-                {isConnected && positionData != undefined && positionData.length && <UserEggsBtn/>}
+                {!isLoading && positionData != undefined ? <p>A total of {positionData.length} / {totalEggs} eggs have been found</p> : <></>}
+                {isConnected && positionData != undefined && positionData.length ? <UserEggsBtn/> : <></>}
             </div>
             
             <div className="map-contents">
