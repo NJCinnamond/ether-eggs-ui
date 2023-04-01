@@ -1,13 +1,19 @@
-.contents-left > a {
-    text-decoration: none; /* no underline */
-    color: black;
-  }
+
 
 .contents-left {
   flex-basis: 50%;
-  font-size: 2em;
-  font-weight: 400;
-  padding-top: .2em;
+}
+
+.title {
+  float: left;
+}
+
+.title > a {
+  text-decoration: none; /* no underline */
+  color: black;
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-left: .8em;
 }
 
 .contents-right {
@@ -26,7 +32,7 @@
   float: right;
   top: 50%;
   margin-right: 2em;
-  margin-top: .5em;
+  margin-top: .8em;
   margin-bottom: auto;
 }
 
@@ -34,5 +40,5 @@
   display: flex;
   width: min(100%,850px);
   margin: .5em auto auto auto;
-  height: 50px;
+  height: 60px;
 }

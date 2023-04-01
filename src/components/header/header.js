@@ -11,9 +11,12 @@ export const Header = () => {
         <div>
             <div className="header-container">
                 <div className="contents-left">
-                    <a href="/">
-                        Ether Eggs
-                    </a>
+                    <div className="title">
+                        <a href="/">
+                            Ether Eggs
+                        </a>
+                    </div>
+                    
                 </div>
                 <div className="contents-right">
                     <div className={connectClassName}>
