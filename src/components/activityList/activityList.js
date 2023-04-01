@@ -9,7 +9,7 @@ const maxActivityIdx = 10;
 export const ActivityList = () => {
     const [activities, setActivities] = useState([]);
 
-    const queryParameters = new URLSearchParams(window.location.search)
+    const queryParameters = new URLSearchParams(window.location.search);
     const code = queryParameters.get("code");
 
     useEffect(() => {

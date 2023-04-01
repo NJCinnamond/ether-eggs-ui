@@ -1,4 +1,4 @@
-const stravaCallback = "https://ethereggs.xyz/callback";
+const stravaCallback = "https://www.ethereggs.xyz/callback/";
 //const stravaCallback = "http://localhost:3000/callback";
 
 export const getStravaAuthURL = () => {
