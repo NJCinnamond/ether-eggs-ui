@@ -11,7 +11,7 @@ export const Header = () => {
         <div>
             <div className="header-container">
                 <div className="contents-left">
-                    <div className="title">
+                    <div className="header-title">
                         <a href="/">
                             Ether Eggs
                         </a>

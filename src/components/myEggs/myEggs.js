@@ -14,7 +14,7 @@ export const MyEggs = () => {
 
     return (
         <div>
-            <div className="title">Your Eggs</div>
+            <div className="my-eggs-title">Your Eggs</div>
             <div className="helper-text">
                 {address == undefined && <span>Please connect your wallet to view your eggs.</span>}
                 {address != undefined && !isLoading && nftData != undefined && !nftData.length && <span>You haven't found any eggs!</span>}
