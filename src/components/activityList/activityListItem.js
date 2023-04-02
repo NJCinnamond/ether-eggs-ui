@@ -22,7 +22,7 @@ export const ActivityListItem = ({ name, lat, lon }) => {
                         </>
                     ) : 
                         <div className="activity-list-item-center">
-                            No coordinate data found. You may have to wait a few moments for Strava to process your activity.
+                            No coordinate data found. Your Strava activity may have been too short or too quick to generate coordinate data.
                         </div>
                 }
                 
