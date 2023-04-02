@@ -14,13 +14,8 @@ export const ActivityList = () => {
 
     useEffect(() => {
         const fetchActivities = async () => {
-            console.log("fetching activities");
             const accessToken = await getAccessToken(code);
             const activities = await getStravaActivites(accessToken);
-
-            // HACK: mock strava activity
-            activities[0]['end_latlng'] = [42.374652, -71.118551];
-            console.log("activities", activities);
             return activities;
         };
     
@@ -42,8 +37,8 @@ export const ActivityList = () => {
             {Object.entries(activities).map(([key, activity]) => (
                 <ActivityListItem 
                     key={activity.external_id}
-                    lat={activity['end_latlng'][0]} 
-                    lon={activity['end_latlng'][1]}
+                    lat={activity['end_latlng'].length ? activity['end_latlng'][0] : undefined} 
+                    lon={activity['end_latlng'].length ? activity['end_latlng'][1] : undefined}
                     name={activity.name}
                     activity_id={activity.external_id}
                 />

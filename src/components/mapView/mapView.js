@@ -8,7 +8,6 @@ import './mapView.css';
 
 export const MapView = () => {
     const address = useAddress();
-    console.log("Address in mapview: ", address);
     return (
         <div className="map-view">
             

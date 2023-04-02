@@ -10,8 +10,6 @@ export const MyEggs = () => {
 
     const { data: nftData, isLoading, error } = useOwnedNFTs(contract, address);
 
-    console.log("Data: ", nftData);
-
     return (
         <div>
             <div className="my-eggs-title">Your Eggs</div>
