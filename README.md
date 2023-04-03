@@ -4,6 +4,8 @@ This repo contains the frontend UI code for the Ether Eggs project, a Harvard Bl
 
 The code is deployed at https://ethereggs.xyz.
 
+Video presentation: https://www.youtube.com/watch?v=p0oBf2SKwhk
+
 Ether Eggs is a web3 social dApp that allows users to mint on-chain easter egg NFTs if they prove they travelled to the egg's real-world geolocation. Users provide their real-world location by connecting to the Strava API and whitelisting the dApp to view their activities and corresponding latitudinal and longitudinal data. The dApp checks if the activity location satisfies the on-chain location of the egg by checking that their hashes are equal. If it does, the user can mint the egg NFT as proof that they were the first to find the easter egg.
 
 An egg's real-world location is defined by the EtherEggs smart contract 'coordinate hash', which is publically accessible. The EtherEgg smart contract can contain any number of eggs, each defined by a keccack256 hash of the latitude/longitude pair of the egg location and a hint string that users
